@@ -2,29 +2,38 @@
 
 int main() {
     std::string str;
+    bool is_compress = 0;
     while (1) {
         try {
-            std::cout << "输入文本：";
+            std::cout << "压缩【C】或解压【D】：";
             std::getline(std::cin, str);
-            if (str == "exit") {
+            if (str == "C" || str == "c") {
+                is_compress = 1;
+            }
+            else if (str == "D" || str == "d") {
+                is_compress = 0;
+            }
+            else    if (str == "exit") {
                 return 0;
             }
             else if (str == "clear") {
                 system("cls");
             }
             else {
-                chr::huffman_tree<char> comp(str.begin(), str.end());
-                std::cout << "哈夫曼码：" << "\n";
-                std::cout << comp.to_string();
-                auto encoded = comp.encode(str.begin(), str.end());
-                std::cout << "编码结果：" << encoded.to_string(1) << "\n";
-                auto decoded = comp.decode(encoded);
-                std::cout << "解码结果：";
-                for (auto k : decoded) {
-                    std::cout << k;
-                }
-                std::cout << "\n";
-                comp.print_compression_info(str.begin(), str.end());
+                throw std::runtime_error("错误代码，请重试");
+            }
+            std::cout << "输入地址：";
+            std::getline(std::cin, str);
+            if (str.starts_with("\"") && str.ends_with("\"")) {
+                str = str.substr(1, str.length() - 2);
+            }
+            if (is_compress) {
+                str = chr::compress(str).string();
+                std::cout << "压缩文件创建于：" << str << "\n";
+            }
+            else {
+                str = chr::decompress(str).string();
+                std::cout << "解压缩文件创建于：" << str << "\n";
             }
         }
         catch (std::runtime_error& e) {
