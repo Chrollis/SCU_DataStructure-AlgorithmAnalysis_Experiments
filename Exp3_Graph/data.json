@@ -1,0 +1,123 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "West_City",
+      "places": [
+        {
+          "id": 4294967297,
+          "name": "Point_A",
+          "longitude": 100,
+          "latitude": 40
+        },
+        {
+          "id": 4294967298,
+          "name": "Point_B",
+          "longitude": 100.1,
+          "latitude": 40
+        },
+        {
+          "id": 4294967299,
+          "name": "Point_C",
+          "longitude": 100.1,
+          "latitude": 40.1
+        },
+        {
+          "id": 4294967300,
+          "name": "Point_D",
+          "longitude": 100,
+          "latitude": 40.1
+        }
+      ],
+      "roads": [
+        {
+          "from": 4294967297,
+          "to": 4294967298,
+          "bidirectional": true
+        },
+        {
+          "from": 4294967297,
+          "to": 4294967299,
+          "bidirectional": true
+        },
+        {
+          "from": 4294967297,
+          "to": 4294967300,
+          "bidirectional": true
+        },
+        {
+          "from": 4294967298,
+          "to": 8589934593,
+          "bidirectional": false
+        },
+        {
+          "from": 4294967298,
+          "to": 8589934596,
+          "bidirectional": false
+        },
+        {
+          "from": 4294967300,
+          "to": 4294967299,
+          "bidirectional": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "East_City",
+      "places": [
+        {
+          "id": 8589934593,
+          "name": "Point_E",
+          "longitude": 100.5,
+          "latitude": 40
+        },
+        {
+          "id": 8589934594,
+          "name": "Point_F",
+          "longitude": 100.6,
+          "latitude": 40
+        },
+        {
+          "id": 8589934595,
+          "name": "Point_G",
+          "longitude": 100.6,
+          "latitude": 40.1
+        },
+        {
+          "id": 8589934596,
+          "name": "Point_H",
+          "longitude": 100.5,
+          "latitude": 40.1
+        }
+      ],
+      "roads": [
+        {
+          "from": 8589934593,
+          "to": 8589934594,
+          "bidirectional": true
+        },
+        {
+          "from": 8589934593,
+          "to": 8589934595,
+          "bidirectional": true
+        },
+        {
+          "from": 8589934593,
+          "to": 8589934596,
+          "bidirectional": true
+        },
+        {
+          "from": 8589934593,
+          "to": 4294967298,
+          "bidirectional": false
+        },
+        {
+          "from": 8589934596,
+          "to": 4294967299,
+          "bidirectional": false
+        }
+      ]
+    }
+  ]
+}
